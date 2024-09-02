@@ -4,6 +4,10 @@ Ditify is a lightweight Python script designed to receive notifications intended
 
 It was originally designed for use with the Proxmox notification system. Therefore, if you plan to use it for a different purpose, some adjustments may be necessary.
 
+## Important Disclaimer
+
+I am an idiot and have no idea what I am doing, so please be careful when using this script and do not trust it under any circumstances.
+
 ## Features
 
 - **Message Forwarding**: Forwards Gotify notifications as Discord DMs to specified users.
