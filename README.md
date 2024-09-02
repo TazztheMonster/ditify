@@ -12,7 +12,7 @@ It was originally designed for use with the Proxmox notification system. Therefo
 
 ## Prerequisites
 
-- Python 3.9+
+- Python 3.9+ or Docker
 - A Discord bot token
 - Docker (optional, if running in a container)
 
