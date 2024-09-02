@@ -1,0 +1,17 @@
+{
+    "discord_token": "PlaceDiscordBotTokenHere",
+    "user_ids": [
+      012345678901234567
+    ],
+    "tokens": [
+      {
+        "name": "ExampleToken",
+        "token": "p4uthpse9zhrpiohj8sgj"
+      },
+      {
+        "name": "OtherExample",
+        "token": "oiöw5hzoizmudodirlmzö"
+      }
+    ]
+  }
+  
