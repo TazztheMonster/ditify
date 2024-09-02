@@ -19,61 +19,60 @@ Ditify is a lightweight Python script designed to receive notifications intended
 
 ### 1. Clone the Repository
 
-'''
+```
 git clone https://github.com/yourusername/ditify.git
 cd ditify
-'''
+```
 
 ### 2. Configure the `config.json`
 
 Copy the template file and update it with your Discord bot token, user IDs, and Gotify tokens.
 
-'''
+```
 cp config.json.template config.json
-'''
+```
 
-Edit `config.json`:
+Edit `config.json` to your likings.
 
-'''
-{
-  "discord_token": "YourDiscordBotToken",
-  "user_ids": [
-    123456789012345678
-  ],
-  "tokens": [
-    {
-      "name": "ExampleToken",
-      "token": "yourgotifytoken"
-    },
-    {
-      "name": "OtherExample",
-      "token": "anothergotifytoken"
-    }
-  ]
-}
-'''
 
 ### 3. Install Dependencies
 
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 ### 4. Run Ditify
 
-'''
+```
 python main.py
-'''
+```
 
-## Running with Docker
+## Running with Docker (Docker-Compose)
 
-### 1. Run the Container with Docker Compose
+### 1. Clone the Repository
 
-Simply run:
+```
+git clone https://github.com/yourusername/ditify.git
+cd ditify
+```
 
-'''
+### 2. Configure the `config.json`
+
+Copy the template file and update it with your Discord bot token, user IDs, and Gotify tokens.
+
+```
+cp config.json.template config.json
+```
+
+Edit `config.json` to your likings.
+
+### 3. Run the Container with Docker Compose
+
+Run:
+
+```
 docker-compose up -d
-'''
+```
 
 The application will be accessible and ready to receive Gotify notifications at `http://localhost:5000/message`.
 
@@ -85,12 +84,18 @@ Once Ditify is running, it will listen for incoming messages sent to the `/messa
 
 Here's an example of a `POST` request to send a message:
 
-'''
+```
 curl -X POST http://localhost:5000/message \
 -H "Authorization: Bearer yourgotifytoken" \
 -H "Content-Type: application/json" \
 -d '{"title": "Test Notification", "message": "This is a test message"}'
-'''
+```
+or
+```
+curl -X POST http://localhost:5000/message?token=yourgotifytoken \
+-H "Content-Type: application/json" \
+-d '{"title": "Test Notification", "message": "This is a test message"}'
+```
 
 ## Troubleshooting
 
